@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ghsum"
+version = "0.1.0"
+description = "Summarize a GitHub repository from the command line"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "KimPashka" }]
+requires-python = ">=3.9"
+dependencies = ["githubkit>=0.11,<1"]
+
+[project.urls]
+Repository = "https://github.com/kimpasha2008-spec/ghsum"
+
+[project.scripts]
+ghsum = "ghsum.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
